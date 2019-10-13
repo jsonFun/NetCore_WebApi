@@ -12,14 +12,24 @@ using Microsoft.Extensions.Options;
 using System.IO;
 using System.Reflection;
 using Swashbuckle.AspNetCore.Swagger;
+using log4net.Repository;
+using log4net;
+using log4net.Config;
 
 namespace WebApi
 {
     public class Startup
     {
+        public static ILoggerRepository repository { get; set; }
+       
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
+            repository = LogManager.CreateRepository("WebApi"); //我的项目名称叫NetCoreApp
+                                                                    //指定配置文件
+            XmlConfigurator.Configure(repository, new FileInfo("log4net.config"));
+
         }
 
         public IConfiguration Configuration { get; }
