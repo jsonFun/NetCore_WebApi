@@ -1,5 +1,8 @@
 # NetCore_WebApi
-NetCore_WebApi, Swagger  RESTful API
+NetCore_WebApi, 
+Swagger  RESTful API.
+log4net
+
 
 
 
