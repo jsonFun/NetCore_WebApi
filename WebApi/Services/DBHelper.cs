@@ -14,6 +14,7 @@ namespace WebApi.Services
         /// </summary>
         public DbSet<Users> Users { get; set; }
 
+        public DbSet<MainMenu> MainMenu { get; set; }
         /// <summary>
         /// 读取SqlServer地址
         /// </summary>

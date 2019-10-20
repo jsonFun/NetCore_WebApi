@@ -26,6 +26,7 @@ namespace WebApi.Controllers
             Logger.Info(JsonConvert.SerializeObject(param));//此处调用日志记录函数记录日志
             Logger.Error("错误");
             Logger.Warn("警告");
+            var ss = crus.QueryS();
             int s =  crus.Add(param);
             return s;
         }
